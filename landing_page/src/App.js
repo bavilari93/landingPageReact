@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav'
 import Display from './components/Display'
-
+import Item from './components/Item'
 
 
 class App extends Component {
@@ -10,7 +10,8 @@ class App extends Component {
     super();
     this.state={
       mode:'', 
-      photoData:[]
+      photoData:[], 
+      project:[]
     }
   }
 
@@ -37,7 +38,13 @@ class App extends Component {
       }
     })
   }
-
+  projectDisplay(data){
+    this.setState({
+      project: data,
+      mode:'project'
+    })
+    console.log(data)
+  }
 
   modeChange(mode){
    this.setState({
@@ -50,10 +57,16 @@ class App extends Component {
       console.log('about')
     }else if(mode === 'contact'){
       console.log('contact')
+    }else if(mode === 'project'){
+      return(
+        <Item
+        url={this.state.project}
+        />)
     }else{
       return(
         <Display
         data={this.state.photoData}
+        project={this.projectDisplay.bind(this)}
         />)
     }
   }

@@ -9,9 +9,11 @@ class Display extends Component{
 			return (
 				<div
 			key={index}
-			className="photo-item">
+			className="photo-item"
+			onClick={()=>{this.props.project(el.small)}}>
 			<Item url={el.small}/>
-			</div>
+			</div
+			>
 			)
 		})
 	}
