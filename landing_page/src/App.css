@@ -70,10 +70,11 @@ nav div:hover {
 .about{
     display: flex;
     flex-direction: row;
+    margin-top: 5rem;
 }
 
 .left {
-    background-color: black;
+    background-color:#034F84;
     width: 50%;
     height: 43rem;
 }
@@ -81,5 +82,26 @@ nav div:hover {
 .right {
     width: 50%;
     margin-left: 3rem;
-    background-color: gray;
+    flex-direction: column;
 }
+.right h1, p{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.right div{
+    margin:0 auto;
+    margin-top: 3rem;
+    width: 8rem;
+    background-color:#034F84;
+    text-align:center; 
+    padding: .9rem;
+}
+
+.right a{ 
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
+

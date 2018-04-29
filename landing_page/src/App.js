@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Display from './components/Display'
 import Item from './components/Item'
 import About from './components/About'
+import Form from './components/Form'
 
 class App extends Component {
   constructor(){
@@ -56,7 +57,8 @@ class App extends Component {
     if(mode === 'about'){
      return(<About/>)
     }else if(mode === 'contact'){
-      console.log('contact')
+      return(
+        <Form/>)
     }else if(mode === 'project'){
       return(
         <Item
