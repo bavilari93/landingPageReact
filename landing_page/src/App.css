@@ -8,7 +8,9 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 2%;
-    width: 100%;
+    width: 70%;
+    height: 60rem;
+    overflow: scroll;
     padding-left: 6%;
     flex-direction: row;
 }
@@ -18,9 +20,9 @@
     margin-left: 1rem;
 }
 
-.photo-item img{
-width: 30rem;
-height: 25rem;
+.photo-item img {
+    width: 30rem;
+    height: 25rem;
 }
 
 nav {
@@ -50,7 +52,16 @@ nav div:hover {
     cursor: pointer;
 }
 
-img {
-    width: 300px;
-    height: 300px;
+.item{
+   width: 100%;
+   margin: 0 auto;
+   margin-top: 1.3rem;
+   display: flex;
+   display: -webkit-flex;
+   display: -ms-flex;
+}
+.item img{
+
+    margin: 0 auto;
+    max-width: 100%;
 }
