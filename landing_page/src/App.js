@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Nav'
 import Display from './components/Display'
 import Item from './components/Item'
-
+import About from './components/About'
 
 class App extends Component {
   constructor(){
@@ -54,7 +54,7 @@ class App extends Component {
 
   renderView(mode){
     if(mode === 'about'){
-      console.log('about')
+     return(<About/>)
     }else if(mode === 'contact'){
       console.log('contact')
     }else if(mode === 'project'){

@@ -17,6 +17,7 @@
 
 .photo-item {
     float: left;
+    margin: 0 auto;
     margin-left: 1rem;
 }
 
@@ -52,16 +53,33 @@ nav div:hover {
     cursor: pointer;
 }
 
-.item{
-   width: 100%;
-   margin: 0 auto;
-   margin-top: 1.3rem;
-   display: flex;
-   display: -webkit-flex;
-   display: -ms-flex;
+.item {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1.3rem;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
 }
-.item img{
+
+.item img {
 
     margin: 0 auto;
     max-width: 100%;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    background-color: black;
+    width: 50%;
+    height: 43rem;
+}
+
+.right {
+    width: 50%;
+    margin-left: 3rem;
+    background-color: gray;
 }
