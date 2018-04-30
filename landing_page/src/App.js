@@ -12,12 +12,16 @@ class App extends Component {
     this.state={
       mode:'', 
       photoData:[], 
-      project:[]
+      project:[], 
+      name:'', 
+      email:'', 
+      subject:'',
+      message:''
     }
   }
 
   componentDidMount(){
-      fetch('https://api.unsplash.com/photos/?page=22&per_page=6&query=flatlay&client_id=a697a3f1971a87feb8280b49b969dfed2c0e03a803128d24f47dc7aa18a95909' )
+      fetch('https://api.unsplash.com/photos/?page=2&per_page=6&query=flatlay&client_id=a697a3f1971a87feb8280b49b969dfed2c0e03a803128d24f47dc7aa18a95909' )
       .then(res => res.json())
       .then(data =>{
           this.setState({
@@ -29,6 +33,19 @@ class App extends Component {
       });
   }
 
+handleChange(input){
+ let target = input.target, 
+ value = target.value, 
+ name = target.name
+ console.log(value);
+ this.setState({
+  [name]: value
+ })
+}
+
+handleSubmit(event){
+  event.preventDefault();
+}
   parsedResults(data){
     console.log(data)
     return data.filter(img =>{
@@ -58,7 +75,14 @@ class App extends Component {
      return(<About/>)
     }else if(mode === 'contact'){
       return(
-        <Form/>)
+        <Form
+        name={this.state.name}
+        email={this.state.email}
+        subject={this.state.subject}
+        message={this.state.message}
+        handleChange={this.handleChange.bind(this)}
+        handleSubmit={this.handleSubmit.bind(this)}
+        />)
     }else if(mode === 'project'){
       return(
         <Item
@@ -76,6 +100,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+      <h1> modern</h1>
       <Nav
       modeChange={this.modeChange.bind(this)}/>
         {this.renderView(this.state.mode)}

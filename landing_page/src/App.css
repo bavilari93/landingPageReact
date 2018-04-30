@@ -4,10 +4,22 @@
     flex-wrap: flex;
 }
 
+h1{
+    font-size: 5rem;
+    text-align: center;
+    margin-top:.5rem;
+    font-weight: 200;
+    color: #034F84;
+    text-transform: uppercase; 
+}
+
+p{
+    font-size: 1.5rem;
+    text-align: center;
+}
 .main-display {
     align-items: center;
     margin: 0 auto;
-    margin-top: 2%;
     width: 70%;
     height: 60rem;
     overflow: scroll;
@@ -74,18 +86,23 @@ nav div:hover {
 }
 
 .left {
-    background-color:#034F84;
+    /*background-color:#034F84;*/
     width: 50%;
     height: 43rem;
+}
+.left h1{
+    font-size: 3rem;
+    margin-top: 15rem;
 }
 
 .right {
     width: 50%;
     margin-left: 3rem;
     flex-direction: column;
+    background-color: whiteSmoke;
 }
 .right h1, p{
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 2rem;
 }
@@ -104,4 +121,26 @@ nav div:hover {
     color: white;
     margin: 0 auto;
 }
+form{
+    margin-top: 8rem;
+}
+input{
+    margin-top: .5rem;
+    margin-left: 3rem;
+    width: 25rem;
+    height: 3rem;
+    text-transform: uppercase;
+    border:solid #034F84 .1rem;
+}
+form .message{
+    height: 10rem;
+}
 
+form button{
+    margin-top: .3rem;
+    width: 6rem;
+    height: 3rem;
+    margin-left: 22.3rem;
+    background-color: #034F84;
+    color: white;
+}
